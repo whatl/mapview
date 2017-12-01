@@ -1,4 +1,4 @@
-package com.helloworld.view.mapview;
+package com.jtv.view.mapview;
 
 /**
  * Created by liugengsheng on 2017/10/23.

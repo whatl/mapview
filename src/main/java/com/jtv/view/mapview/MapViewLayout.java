@@ -4,8 +4,6 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.helloworld.view.mapview.MapViewTheme;
-
 import java.util.List;
 
 /**
