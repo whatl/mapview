@@ -31,11 +31,12 @@ public class MapView {
     public boolean signLine;
 
     //最大行数
-    public int maxLine=-1;
+    public int maxLine = -1;
 
     //显示一行不全时处理方式
     private TextUtils.TruncateAt mEllipsize;
-
+    //标题是否对齐
+    private boolean titleAlign = true;
     public int titleTextSize = -1;
     public int valueTextSize = -1;
     public float weight = -1;//合并显示的权重
@@ -154,5 +155,13 @@ public class MapView {
 
     public void setMaxLine(int maxLine) {
         this.maxLine = maxLine;
+    }
+
+    public void setTitleAlign(boolean titleAlign) {
+        this.titleAlign = titleAlign;
+    }
+
+    public boolean isTitleAlign() {
+        return titleAlign;
     }
 }

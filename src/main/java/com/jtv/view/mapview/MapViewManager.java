@@ -9,8 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.helloworld.view.mapview.MapViewTheme;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -165,10 +163,12 @@ public class MapViewManager {
     }
 
 
+
     //字体对齐
     public static void textHeadAlign(List<MapView> map) {
         int max = 0;
         for (MapView integer : map) {
+            if(!integer.isTitleAlign())continue;
             String value = integer.getTitle();
             if (value == null)
                 continue;
@@ -181,6 +181,7 @@ public class MapViewManager {
             // "大于7个字还没提供解决方案...";
             return;
         for (MapView integer : map) {
+            if(!integer.isTitleAlign())continue;
             String value = integer.getTitle();
             if (value == null)
                 continue;
@@ -188,6 +189,7 @@ public class MapViewManager {
             integer.setTitle(value);
         }
     }
+
 
     // 返回文字排版后的内容,max 最长的标题个数
     public static String typeSetting(String value, int max) {
